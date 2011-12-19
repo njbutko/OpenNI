@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(OpenNI)
 
-# Find platform 
+# Find platform
 # -------------
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
 	set(OPENNI_PLATFORM_LINUX true)

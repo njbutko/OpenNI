@@ -1,6 +1,6 @@
 #############################################################################
 # OpenNI makefile.
-# 
+#
 # default configuration is Release. for a debug version use:
 # 	make CFG=Debug
 #
@@ -63,16 +63,16 @@ ALL_PROJS_CLEAN = $(foreach proj,$(ALL_PROJS),$(proj)-clean)
 
 # define a function which creates a target for each proj
 define CREATE_PROJ_TARGET
-$1: 
+$1:
 	$(MAKE) -C $1 CFG=$(CFG)
 
-$1-clean: 
+$1-clean:
 	$(MAKE) -C $1 CFG=$(CFG) clean
 endef
 
 ################ TARGETS ##################
 
-.PHONY: all $(ALL_PROJS) $(ALL_PROJS_CLEAN) install uninstall clean 
+.PHONY: all $(ALL_PROJS) $(ALL_PROJS_CLEAN) install uninstall clean
 
 # make all makefiles
 all: $(ALL_PROJS)

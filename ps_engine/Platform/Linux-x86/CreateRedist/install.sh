@@ -27,7 +27,7 @@ while (( "$#" )); do
 		printf "\t-i\tInstall (default)\n"
 		printf "\t-u\tUninstall\n"
 		exit 1
-		;;		
+		;;
 	esac
 	shift
 done
@@ -99,14 +99,14 @@ else #uninstall
         rm -f $INSTALL_LIB/`basename $filename`
     done
     printf "OK\n"
-	
+
     # delete executables
     printf "removing executables..."
     for filename in $BIN_FILES; do
         rm -f $INSTALL_BIN/`basename $filename`
     done
     printf "OK\n"
-	
+
     # delete config dir
     printf "removing config dir..."
 	rm -rf $INSTALL_ETC
