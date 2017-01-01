@@ -2,7 +2,7 @@ all: installed
 
 GIT_DIR = build/ps_engine
 GIT_URL = https://github.com/ros-pkg-git/Sensor.git
-#GIT_PATCH = 
+#GIT_PATCH =
 GIT_REVISION=ros
 
 ENGINE=$(shell echo $$(eval rospack find ps_engine | sed 's/\//\\\//g'))
@@ -15,7 +15,7 @@ PLATFORM=Linux-x86
 include $(shell rospack find mk)/git_checkout.mk
 
 installed: $(GIT_DIR)
-	@-mkdir -p bin lib config 
+	@-mkdir -p bin lib config
 	@echo "### Patching the main Makefile for PS Engine..."
 	@cd $(GIT_DIR)/Platform/$(PLATFORM)/Build && \
 		sed -i -e 's/CFG=$$(CFG)//g' Makefile && \

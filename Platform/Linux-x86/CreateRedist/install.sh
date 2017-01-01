@@ -26,7 +26,7 @@ while (( "$#" )); do
 		printf "\t-i\tInstall (default)\n"
 		printf "\t-u\tUninstall\n"
 		exit 1
-		;;		
+		;;
 	esac
 	shift
 done
